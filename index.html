@@ -34,28 +34,34 @@
 						</div>
 						<div class="panel" ng-show="panel.isSelected(3)">
 						<h4>Comments</h4>
-							<blockquote ng-repeat="comment in animal.comments">
-								<b>Emotion:</b> {{comment.emotion}}
-								<p>{{comment.text}}</p>
-								<cite>by: {{comment.author}}</cite>
+							<blockquote ng-repeat="comment in animal.comments" style="font-size:8px;">
+							<b>Emotion:</b> {{comment.emotion}}
+							<p>{{comment.text}}</p>
+							<cite>by: {{comment.author}}</cite>
+							</blockquote>
 
 								<!--  Comment Form -->
-								<form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="reviewCtrl.addComment(animal)">
+								<form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentForm.$valid && commentCtrl.addComment(animal)" novalidate>
+
 								<h4>Submit a Comment</h4>
+								<p>Your emotion: {{commentCtrl.comment.emotion}}</p>
+								<p>Your text: {{commentCtrl.comment.text}}</p>
+								<p>Your name: {{commentCtrl.comment.author}}</p>
 								<fieldset class="form-group">
-									<select ng-model="comment.emotion" class="form-control" ng-options="emotions for emotions in ['Super Happy','Happy','Sad','Super Sad']"  title="Emotion">
+									<select ng-model="commentCtrl.comment.emotion" class="form-control" ng-options="emotions for emotions in ['Super Happy','Happy','Sad','Super Sad']"  title="Emotion">
 										<option value="">Pick Your Emotion</option>
 									</select>
 								</fieldset>
 								<fieldset class="form-group">
-									<textarea ng-model="comment.text" class="form-control" placeholder="Write a short comment..." title="Comment"></textarea>
+									<textarea ng-model="commentCtrl.comment.text" class="form-control" placeholder="Write a short comment..." title="Comment"></textarea>
 								</fieldset>
 								<fieldset class="form-group">
-									<input ng-model="comment.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+									<input ng-model="commentCtrl.comment.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
 								</fieldset>
 								<fieldset class="form-group">
 									<input type="submit" class="btn btn-primary pull-right" value="Submit Comment" />
 								</fieldset>
+								{{commentForm.$valid}}
 							</form>
 
 						</blockquote>
