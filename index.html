@@ -34,11 +34,13 @@
 						</div>
 						<div class="panel" ng-show="panel.isSelected(3)">
 						<h4>Comments</h4>
-							<blockquote ng-repeat="comment in animal.comments" style="font-size:8px;">
-							<b>Emotion:</b> {{comment.emotion}}
-							<p>{{comment.text}}</p>
-							<cite>by: {{comment.author}}</cite>
-							</blockquote>
+							<div class="comment-blocks-wrapper" ng-repeat="comment in animal.comments">
+								<div class="comment-blocks-inner">
+									<b>Emotion:</b> {{comment.emotion}}
+									<p>{{comment.text}}</p>
+									<cite>by: {{comment.author}}</cite>
+								</div>
+							</div>
 
 								<!--  Comment Form -->
 								<form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentForm.$valid && commentCtrl.addComment(animal)" novalidate>
@@ -67,7 +69,6 @@
 						</blockquote>
 					</div>
 				</section>
-				<hr>
 			</div>
 			<script type="text/javascript" src="angular.min.js"></script>
 			<script type="text/javascript" src="app.js"></script>

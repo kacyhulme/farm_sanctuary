@@ -19,3 +19,15 @@ img {
 .ng-valid.ng-dirty {
 	border-color: green;
 }
+
+.comment-blocks-wrapper {
+	width: 100%;
+}
+
+.comment-blocks-inner {
+	width: 33%;
+	float: left;
+	border: 1px dotted grey;
+	padding: 10px;
+	margin-bottom: 15px;
+}
