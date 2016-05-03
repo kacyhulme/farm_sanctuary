@@ -20,14 +20,60 @@ img {
 	border-color: green;
 }
 
-.comment-blocks-wrapper {
+.comment-block-left {
 	width: 100%;
 }
 
-.comment-blocks-inner {
+.comment-block-right {
 	width: 33%;
 	float: left;
-	border: 1px dotted grey;
 	padding: 10px;
 	margin-bottom: 15px;
 }
+
+.adopt-button {
+	margin-bottom: 15px;
+}
+
+.animal-tile {
+	border-bottom: 1px solid black;
+	padding-top: 20px;
+}
+
+.animal-tile section {
+	text-align: center;
+}
+
+.animal-tile section ul.nav.nav-pills {
+	margin-left: 39%;
+}
+
+form {
+	padding: 15px;
+	background-color: lightgrey;
+	border-radius: 15px;
+}
+
+form .col-md-6 {
+
+}
+
+form .col-md-6 {
+
+}
+
+form .col-md-6 .form-group {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

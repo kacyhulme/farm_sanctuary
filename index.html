@@ -6,71 +6,86 @@
 </head>
 <body ng-controller="FarmController as farm">
 	<h2>Farm Animal Sanctuary</h2>
-	<button>Donate</button>
-	<div ng-repeat="animal in farm.animals">
-		<p>Name: {{animal.name}}</p>
-		<img ng-src="{{animal.images[0].thumb}}"</>
-		<p>Age: {{animal.age}}</p>
-		<p>Color: {{animal.color}}</p>
-		<p>Origin: {{animal.origin}}</p>
-		<button ng-show="animal.canAdopt">Apply for Adoption</button>
-		<div ng-hide="animal.canAdopt">Not available for adoption at this time</div>
-		<section ng-controller="PanelController as panel">
-			<ul class="nav nav-pills">
-				<li ng-class="{ active:panel.isSelected(1) }">
-					<a href ng-click="panel.selectTab(1)">History</a></li>
-					<li ng-class="{ active:panel.isSelected(2) }">
-						<a href ng-click="panel.selectTab(2)">Full Description</a></li>
-						<li ng-class="{ active:panel.isSelected(3) }">
-							<a href ng-click="panel.selectTab(3)">Comments</a></li>
-						</ul>
-						<div class="panel" ng-show="panel.isSelected(1)">
-							<h4>History</h4>
-							<p>{{product.history}}</p>
-						</div>
-						<div class="panel" ng-show="panel.isSelected(2)">
-							<h4>Full Description</h4>
-							<p>{{product.description}}</p>
-						</div>
-						<div class="panel" ng-show="panel.isSelected(3)">
-						<h4>Comments</h4>
-							<div class="comment-blocks-wrapper" ng-repeat="comment in animal.comments">
-								<div class="comment-blocks-inner">
-									<b>Emotion:</b> {{comment.emotion}}
-									<p>{{comment.text}}</p>
-									<cite>by: {{comment.author}}</cite>
-								</div>
-							</div>
-
-								<!--  Comment Form -->
-								<form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentForm.$valid && commentCtrl.addComment(animal)" novalidate>
-
-								<h4>Submit a Comment</h4>
-								<p>Your emotion: {{commentCtrl.comment.emotion}}</p>
-								<p>Your text: {{commentCtrl.comment.text}}</p>
-								<p>Your name: {{commentCtrl.comment.author}}</p>
-								<fieldset class="form-group">
-									<select ng-model="commentCtrl.comment.emotion" class="form-control" ng-options="emotions for emotions in ['Super Happy','Happy','Sad','Super Sad']"  title="Emotion">
-										<option value="">Pick Your Emotion</option>
-									</select>
-								</fieldset>
-								<fieldset class="form-group">
-									<textarea ng-model="commentCtrl.comment.text" class="form-control" placeholder="Write a short comment..." title="Comment"></textarea>
-								</fieldset>
-								<fieldset class="form-group">
-									<input ng-model="commentCtrl.comment.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
-								</fieldset>
-								<fieldset class="form-group">
-									<input type="submit" class="btn btn-primary pull-right" value="Submit Comment" />
-								</fieldset>
-								{{commentForm.$valid}}
-							</form>
-
-						</blockquote>
-					</div>
-				</section>
+	<div class="animal-tile" ng-repeat="animal in farm.animals">
+		<div class="row">
+			<div class="col-md-6">
+				<p>Name: {{animal.name}}</p>
+				<p>Age: {{animal.age}}</p>
+				<p>Color: {{animal.color}}</p>
+				<p>Origin: {{animal.origin}}</p>
 			</div>
-			<script type="text/javascript" src="angular.min.js"></script>
-			<script type="text/javascript" src="app.js"></script>
-		</body>
-		</html>	
+			<div class="col-md-6">
+				<img ng-src="{{animal.images[0].thumb}}"</>
+			</div>
+		</div>
+		<div>
+			<div class="adopt-button">
+				<button class="btn btn-default" ng-show="animal.canAdopt">Apply for Adoption</button>
+				<div ng-hide="animal.canAdopt">Not available for adoption at this time</div>
+			</div>
+			<section ng-controller="PanelController as panel">
+				<ul class="nav nav-pills">
+					<li ng-class="{ active:panel.isSelected(1) }">
+						<a href ng-click="panel.selectTab(1)">History</a></li>
+						<li ng-class="{ active:panel.isSelected(2) }">
+							<a href ng-click="panel.selectTab(2)">Full Description</a></li>
+							<li ng-class="{ active:panel.isSelected(3) }">
+								<a href ng-click="panel.selectTab(3)">Comments</a></li>
+							</ul>
+							<div class="panel" ng-show="panel.isSelected(1)">
+								<h4>History</h4>
+								<p>{{animal.history}}</p>
+							</div>
+							<div class="panel" ng-show="panel.isSelected(2)">
+								<h4>Full Description</h4>
+								<p>{{animal.description}}</p>
+							</div>
+							<div class="panel" ng-show="panel.isSelected(3)">
+								<div class="row">
+									<div class="col-md-6"
+									<h4>Comments</h4>
+									<div ng-repeat="comment in animal.comments">
+										<div>
+											<em>{{comment.emotion}}</em>
+											<p><em>{{comment.text}}</em></p>
+											<cite>by: {{comment.author}}</cite>
+										</div>
+									</div>
+								</div>
+								<!--  Comment Form -->
+								<div class="col-md-6">
+									<form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentForm.$valid && commentCtrl.addComment(animal)" novalidate>
+										<h4>Submit Your own Comment!</h4>
+										<div class="row">
+											<div class="col-md-6" style="text-align:right">
+												<p>Your emotion: {{commentCtrl.comment.emotion}}</p>
+												<p>Your text: {{commentCtrl.comment.text}}</p>
+												<p>Your name: {{commentCtrl.comment.author}}</p>
+											</div>
+											<div class="col-md-6" style="text-align:left; padding-right: 15px;">
+												<fieldset class="form-group">
+													<select ng-model="commentCtrl.comment.emotion" class="form-control" ng-options="emotions for emotions in ['Super Happy','Happy','Sad','Super Sad']"  title="Emotion">
+														<option value="">Pick Your Emotion</option>
+													</select>
+												</fieldset>
+												<fieldset class="form-group">
+													<textarea ng-model="commentCtrl.comment.text" class="form-control" placeholder="Write a short comment..." title="Comment"></textarea>
+												</fieldset>
+												<fieldset class="form-group">
+													<input ng-model="commentCtrl.comment.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+												</fieldset>
+												<fieldset class="form-group">
+													<input type="submit" class="btn btn-primary pull-right" value="Submit Comment" />
+												</fieldset>
+											</form>
+										</div>
+									</div>
+								</div>
+							</blockquote>
+						</div>
+					</section>
+				</div>
+				<script type="text/javascript" src="angular.min.js"></script>
+				<script type="text/javascript" src="app.js"></script>
+			</body>
+			</html>	
