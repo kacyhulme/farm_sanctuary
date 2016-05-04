@@ -4,9 +4,9 @@
       "age":4,
       "color":"brown",
       "origin":"New Jersey",
-      "history":"Henry was first from.... ",
-      "description":"Henry has a great personality... ",
-      "schedule":"Henry eats a lot, starting at.... ",
+      "history":"Henry was first from. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ",
+      "description":"Henry has a great personality. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ",
+      "schedule":"Henry eats a lot, starting at 10am.",
       "canAdopt":true,
       "newAddition":true,
       "images":[  
@@ -42,9 +42,9 @@
       "age":2,
       "color":"brown and black",
       "origin":"New Hampshire",
-      "history":"Molly Moo was first from.... ",
-      "description":"Molly Moo has a great personality... ",
-      "schedule":"Molly Moo eats a lot, starting at.... ",
+      "history":"Molly Moo was first from. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "description":"Molly Moo has a great personality. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "schedule":"Molly Moo eats a lot, starting at 8am.",
       "newAddition":true,
       "images":[  
          {  
@@ -79,9 +79,9 @@
       "age":5,
       "color":"brown and white",
       "origin":"Colorado",
-      "history":"Phillip Simon was first from.... ",
-      "description":"Phillip Simon has a great personality... ",
-      "schedule":"Phillip Simon eats a lot, starting at.... ",
+      "history":"Phillip Simon was first from. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "description":"Phillip Simon has a great personality. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "schedule":"Phillip Simon eats a lot, starting at 6am.",
       "newAddition":true,
       "images":[  
          {  
@@ -116,9 +116,9 @@
       "age":6,
       "color":"brown",
       "origin":"Montana",
-      "history":"Cindy Sally was first from.... ",
-      "description":"Cindy Sally has a great personality... ",
-      "schedule":"Cindy Sally eats a lot, starting at.... ",
+      "history":"Cindy Sally was first from. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "description":"Cindy Sally has a great personality. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "schedule":"Cindy Sally eats a lot, starting at 8am.",
       "newAddition":true,
       "images":[  
          {  

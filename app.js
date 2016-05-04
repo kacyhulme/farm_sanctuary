@@ -35,6 +35,25 @@
   		this.comment = {};
   	}
   });
+
+  app.controller('MenuController', function() {
+    this.donation = false;
+    //this function is setting which is why there is no "return"
+    this.selectTab = function(setTab) {
+      this.donation = setTab;
+    };
+    //this function is asking which is why there is a "return"
+    this.isSelected = function(checkTab){
+      return this.donation == checkTab;
+    }
+  });
+
+  app.directive('cowStats', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'cow-stats.html'
+    };
+  });
 })();
 
 

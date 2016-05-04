@@ -4,15 +4,25 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 	<title>Farm Animal Sanctuary</title>
 </head>
+
+<div ng-controller="MenuController as menu" class="initial-page-opener"><button class="btn btn-default btn-sm">See the Animals</button><button class="btn btn-default btn-sm" ng-click="menu.selectTab(true)">Make a Donation</button><button class="btn btn-default btn-sm">Schedule a Visit</button>
+	<div ng-show="menu.isSelected(true)">
+		How much do you want to donate?
+		<button class="btn btn-default btn-sm">{{ 10 | currency }}</button>
+		<button class="btn btn-default btn-sm">{{ 20 | currency }}</button>
+		<button class="btn btn-default btn-sm">{{ 20 | currency }}</button> 
+		<button class="btn btn-default btn-sm">{{ 50 | currency }}</button>
+		<button class="btn btn-default btn-sm">{{ 100 | currency }}</button>
+		<button class="btn btn-default btn-sm">{{ 150 | currency }}</button>
+	</div>
+</div>
+
 <body ng-controller="FarmController as farm">
 	<h2>Farm Animal Sanctuary</h2>
 	<div class="animal-tile" ng-repeat="animal in farm.animals">
 		<div class="row">
 			<div class="col-md-6">
-				<p>Name: {{animal.name}}</p>
-				<p>Age: {{animal.age}}</p>
-				<p>Color: {{animal.color}}</p>
-				<p>Origin: {{animal.origin}}</p>
+				<cow-stats></cow-stats>
 			</div>
 			<div class="col-md-6">
 				<img ng-src="{{animal.images[0].thumb}}"</>
@@ -20,7 +30,7 @@
 		</div>
 		<div>
 			<div class="adopt-button">
-				<button class="btn btn-default" ng-show="animal.canAdopt">Apply for Adoption</button>
+				<button class="btn btn-default btn-sm" ng-show="animal.canAdopt">Apply for Adoption</button>
 				<div ng-hide="animal.canAdopt">Not available for adoption at this time</div>
 			</div>
 			<section ng-controller="PanelController as panel">
