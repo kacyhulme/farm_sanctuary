@@ -1,0 +1,36 @@
+<section ng-controller="PanelController as panel">
+	<ul class="nav nav-pills">
+		<li ng-class="{ active:panel.isSelected(1) }">
+			<a href ng-click="panel.selectTab(1)">History</a>
+		</li>
+		<li ng-class="{ active:panel.isSelected(2) }">
+			<a href ng-click="panel.selectTab(2)">Full Description</a>
+		</li>
+		<li ng-class="{ active:panel.isSelected(3) }">
+			<a href ng-click="panel.selectTab(3)">Comments</a>
+		</li>
+	</ul>
+	<div class="panel" ng-show="panel.isSelected(1)">
+		<h4>History</h4>
+		<p>{{animal.history}}</p>
+	</div>
+	<div class="panel" ng-show="panel.isSelected(2)">
+		<h4>Full Description</h4>
+		<p>{{animal.description}}</p>
+	</div>
+	<div class="panel" ng-show="panel.isSelected(3)">
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Comments</h4>
+				<div ng-repeat="comment in animal.comments">
+					<div>
+						<em>{{comment.emotion}}</em>
+						<p><em>{{comment.text}}</em></p>
+						<cite>by: {{comment.author}}</cite>
+					</div>
+				</div>
+			</div>
+			<!--  Comment Form -->
+			<comment-form></comment-form>
+		</div>
+	</section>

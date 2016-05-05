@@ -1,0 +1,11 @@
+<div ng-controller="MenuController as menu" class="initial-page-opener"><button class="btn btn-default btn-sm">See the Animals</button><button class="btn btn-default btn-sm" ng-click="menu.selectTab(true)">Make a Donation</button><button class="btn btn-default btn-sm">Schedule a Visit</button>
+	<div ng-show="menu.isSelected(true)">
+		How much do you want to donate?
+		<button class="btn btn-default btn-sm">{{ 10 | currency }}</button>
+		<button class="btn btn-default btn-sm">{{ 20 | currency }}</button>
+		<button class="btn btn-default btn-sm">{{ 20 | currency }}</button> 
+		<button class="btn btn-default btn-sm">{{ 50 | currency }}</button>
+		<button class="btn btn-default btn-sm">{{ 100 | currency }}</button>
+		<button class="btn btn-default btn-sm">{{ 150 | currency }}</button>
+	</div>
+</div>
