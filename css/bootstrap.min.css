@@ -14,12 +14,8 @@ img {
 	overflow: hidden;
 }
 
-.initial-page-opener {
+.donation-header {
 	text-align: center;
-}
-
-.inital-page-opener .btn {
-	margin: 0 10px 0 10px;
 }
 
 .ng-invalid.ng-dirty {
