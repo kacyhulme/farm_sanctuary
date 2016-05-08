@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('farmSanctuary', []);
+  var app = angular.module('farmSanctuary', ['ngRoute']);
 
   app.controller('FarmController', ['$http', function($http){
     var farm = this;
