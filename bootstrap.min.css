@@ -42,6 +42,7 @@ img {
 
 .adopt-button {
 	margin-bottom: 15px;
+	float: center;
 }
 
 .animal-tile {
@@ -75,13 +76,17 @@ form .col-md-6 .form-group {
 
 }
 
+.menubuttons {
+	margin: 0 10px 0 10px;
+}
 
+.links {
 
+}
 
-
-
-
-
+.header-links {
+	float: right;
+}
 
 
 
