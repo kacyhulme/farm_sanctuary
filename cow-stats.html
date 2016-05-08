@@ -2,3 +2,7 @@
 <p>Age: {{animal.age}}</p>
 <p>Color: {{animal.color}}</p>
 <p>Origin: {{animal.origin}}</p>
+<div class="adopt-button">
+	<em ng-hide="animal.canAdopt">Not available for adoption at this time</em>
+	<button class="btn btn-default btn-sm" ng-show="animal.canAdopt">Apply for Adoption</button>
+</div>

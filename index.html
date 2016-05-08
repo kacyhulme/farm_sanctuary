@@ -4,26 +4,11 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 	<title>Farm Animal Sanctuary</title>
 </head>
-<menu></menu>
 <body ng-controller="FarmController as farm">
-	<h2>Farm Animal Sanctuary</h2>
-	<div class="animal-tile" ng-repeat="animal in farm.animals">
-		<div class="row">
-			<div class="col-md-6">
-				<cow-stats></cow-stats>
-			</div>
-			<div class="col-md-6">
-				<img ng-src="{{animal.images[0].thumb}}"</>
-			</div>
-		</div>
-		<div>
-			<div class="adopt-button">
-				<button class="btn btn-default btn-sm" ng-show="animal.canAdopt">Apply for Adoption</button>
-				<div ng-hide="animal.canAdopt">Not available for adoption at this time</div>
-			</div>
-			<panels></panels>
-			</div>
-			<script type="text/javascript" src="angular.min.js"></script>
-			<script type="text/javascript" src="app.js"></script>
-		</body>
-		</html>	
+	<menu></menu>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="angular-route.min.js"></script>
+	<script type="text/javascript" src="routes.js"></script>
+</body>
+</html>	

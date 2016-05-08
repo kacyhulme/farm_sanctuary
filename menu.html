@@ -1,11 +1,16 @@
-<div ng-controller="MenuController as menu" class="initial-page-opener"><button class="btn btn-default btn-sm">See the Animals</button><button class="btn btn-default btn-sm" ng-click="menu.selectTab(true)">Make a Donation</button><button class="btn btn-default btn-sm">Schedule a Visit</button>
-	<div ng-show="menu.isSelected(true)">
-		How much do you want to donate?
-		<button class="btn btn-default btn-sm">{{ 10 | currency }}</button>
-		<button class="btn btn-default btn-sm">{{ 20 | currency }}</button>
-		<button class="btn btn-default btn-sm">{{ 20 | currency }}</button> 
-		<button class="btn btn-default btn-sm">{{ 50 | currency }}</button>
-		<button class="btn btn-default btn-sm">{{ 100 | currency }}</button>
-		<button class="btn btn-default btn-sm">{{ 150 | currency }}</button>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+	<div class="header">
+			<a class="navbar-brand" href="#">Farm Animal Sanctuary</a>
+		</div>
+		<div class="header-links">
+			<ul class="nav navbar-nav">
+				<li><a href="#/catalog-view">View all Animals</a></li>
+				<li><a href="#/visit-view">Schedule a Visit</a></li>
+				<li><a href="#/make-donation">Make a Donation</a></li>
+				<li><a href="/contact.html">Contact Us</a></li>
+			</ul>
+		</div>
 	</div>
-</div>
+</nav>
+<div ng-view></div>
