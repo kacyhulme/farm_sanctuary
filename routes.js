@@ -4,11 +4,11 @@
 		$routeProvider.when('/catalog-view', {
 			templateUrl: 'catalog-view.html'
 		})
-		.when('/visit-view', {
-			templateUrl: 'visit-view.html'
+		.when('/schedule-visit-view', {
+			templateUrl: 'schedule-visit-view.html'
 		})
-		.when('/make-donation', {
-			templateUrl: 'make-donation.html'
+		.when('/make-donation-view', {
+			templateUrl: 'make-donation-view.html'
 		})
 		.otherwise( {redirectTo: '/' });
 	});
