@@ -1,0 +1,12 @@
+<div ng-controller="MenuController as menu" class="initial-page-opener">
+
+		<a href="" ng-click="menu.selectTab(true)">Click here to pick your amount</a>
+
+
+<div ng-show="menu.isSelected(true)">
+		How much do you want to donate?
+		<div ng-repeat="x in [10, 20, 30, 40, 50, 100]">
+			<button class="btn btn-default btn-sm">{{ x | currency}}</button>
+		</div>
+	</div>
+</div>

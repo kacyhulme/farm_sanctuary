@@ -1,0 +1,11 @@
+<div class="animal-tile" ng-repeat="animal in farm.animals">
+	<div class="row">
+		<div class="col-md-6">
+			<cow-stats></cow-stats>
+		</div>
+		<div class="col-md-6">
+			<img ng-src="{{animal.images[0].thumb}}"</>
+		</div>
+	</div>
+	<panels></panels>
+</div>
