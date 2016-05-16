@@ -51,28 +51,28 @@
   app.directive('cowStats', function() {
     return {
       restrict: 'E',
-      templateUrl: 'cow-stats.html'
+      templateUrl: 'templates/cow-stats.html'
     };
   });
 
   app.directive('commentForm', function() {
     return {
       restrict: 'E',
-      templateUrl: 'comment-form.html'
+      templateUrl: 'templates/comment-form.html'
     };
   });
 
   app.directive('menu', function() {
     return {
       restrict: 'E',
-      templateUrl: 'menu.html'
+      templateUrl: 'templates/menu.html'
     };
   });
 
   app.directive('panels', function() {
      return {
       restrict: 'E',
-      templateUrl: 'panels.html'
+      templateUrl: 'templates/panels.html'
     };
   });
 })();
