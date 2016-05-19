@@ -3,7 +3,7 @@
 	<a href="" ng-click="menu.selectTab(true)">Click here to pick your amount</a>
 	<div ng-show="menu.isSelected(true)" class="row" style="margin-top: 25px;">
 		<div ng-repeat="x in [10, 20, 30, 40, 50, 100]" class="col-sm-2">
-			<button class="btn btn-default btn-sm">{{ x | currency}}</button>
+			<a class="btn btn-default btn-sm" href="https://www.paypal.me/kacyhulme">{{ x | currency}}</a>
 		</div>
 	</div>
 </div>
