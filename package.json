@@ -1,13 +1,21 @@
-{  
-   "name":"FarmSanctuary",
-   "version":"1.0.0",
-   "author":"Kacy Hulme",
-   "description":"Save animals",
-   "dependencies":{  
-      "connect":"^2.0.0",
-      "serve-static":"^1.5.0"
-   },
-   "scripts":{  
-      "start":"node server.js"
-   }
+{
+  "name": "FarmSanctuary",
+  "version": "1.0.0",
+  "author": "Kacy Hulme",
+  "description": "Save animals",
+  "dependencies": {
+    "connect": "^2.0.0",
+    "serve-static": "^1.5.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-mocha": "^1.0.1",
+    "mocha": "^2.5.3"
+  }
 }
