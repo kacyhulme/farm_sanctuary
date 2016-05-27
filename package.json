@@ -11,11 +11,10 @@
     "start": "node server.js"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
-    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^1.0.1",
-    "karma-mocha": "^1.0.1",
-    "mocha": "^2.5.3"
+    "karma-jasmine": "^1.0.2",
+    "karma-cli": "^1.0.0"
   }
 }
